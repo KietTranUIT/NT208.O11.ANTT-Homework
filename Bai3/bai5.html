@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bai5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script src="bai5.js"></script>
+</head>
+<body>
+    <div class="form-signup">
+        <div class="form-title">
+            <span>Form Đăng ký</span>
+        </div>
+        <form id="form">
+            <ul class="form-list">
+                <li>
+                    <div class="form-items">
+                        <label for="username">Tên đăng nhập</label>
+                        <input type="text" id="username" name="username" class="form-inputs">
+                    </div>
+                    <span class="form-items-text" id="username-error">Tên không hợp lệ</span>
+                </li>
+
+                <li>
+                    <div class="form-items">
+                        <label for="phonenumber">Số điện thoại</label>
+                        <input type="text" id="phonenumber" name="phonenumber" class="form-inputs">
+                    </div>  
+                    <span class="form-items-text" id="phonenumber-error">Số máy quý khách vừa nhập là không có thực</span>
+                </li>
+
+                <li>
+                    <div class="form-items">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="form-inputs">
+                    </div>
+                    <span class="form-items-text" id="email-error">Vui long nhập email</span>
+                </li>
+
+                <li>
+                    <div class="form-items">
+                        <label for="password">Mật khẩu</label>
+                        <input type="password" id="password" name="password" class="form-inputs">
+                    </div>
+                    <span class="form-items-text" id="password-error">Vui lòng nhập ít nhất 5 kí tự</span>
+                </li>
+
+                <li>
+                    <div class="form-items">
+                        <label for="confirm-password">Nhập lại mật khẩu</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-inputs">
+                    </div>
+                    <span class="form-items-text" id="confirm-password-error">Mật khẩu không trùng</span>
+                </li>
+
+                <li>
+                    <div class="form-items">
+                        <label for="more-information">Thông tin thêm</label>
+                        <input type="password" id="more-information" name="more-information" class="form-inputs">
+                    </div>
+                </li>
+            </ul>
+                <input type="submit" value="Gửi" id="submit">
+        </form>
+    </div>
+</body>
+</html>

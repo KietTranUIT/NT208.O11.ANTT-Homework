@@ -1,0 +1,69 @@
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form-signup {
+    width: 530px;
+    height: 430px;
+    border: 2px solid gray;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: Translate(-50%, -50%);
+}
+
+.form-list {
+    list-style-type: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.form-items {
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+li {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form-inputs {
+    width: 300px;
+    border: 1px solid gray;
+    height: 20px;
+}
+
+.form-title {
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    background-color: white;
+    transform: translate(15px, -10px);
+}
+
+.form-items-text {
+    color: red;
+    visibility: hidden;
+}
+
+#form {
+    height: 100%;
+}
+
+#submit {
+    margin-left: 15px;
+    margin-bottom: 0;
+}
