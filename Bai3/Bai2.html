@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+        }
+
+        #button-container {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="button-container">
+            <button onclick="changeColor()">CHANGE COLOR</button>
+            <button onclick="resizeCircle()">RESIZE</button>
+        </div>
+        <div id="circle"></div>
+    </div>
+
+    <script>
+        function changeColor() {
+            var circle = document.getElementById("circle");
+            var randomColor = getRandomColor();
+            circle.style.backgroundColor = randomColor;
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function resizeCircle() {
+            var circle = document.getElementById("circle");
+            var currentSize = circle.offsetWidth;
+            var newSize = currentSize + getRandomNumber(-50, 50); // Tăng hoặc giảm ngẫu nhiên từ -50px đến 50px
+            circle.style.width = newSize + "px";
+            circle.style.height = newSize + "px";
+        }
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</body>
+</html>
