@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bai4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#more-option').mouseenter(function() {
+                $('.sub-menu').show()
+            })
+            $('#more-option').mouseleave(function() {
+                $('.sub-menu').hide()
+            })
+            $('.sub-menu').mouseenter(function() {
+                $('.sub-menu').show()
+            })
+            $('.sub-menu').mouseleave(function() {
+                $('.sub-menu').hide()
+            })
+        })
+    </script>
+    <title>Bài 4</title>
+</head>
+<body>
+    <div id="header">
+        <nav class="container">
+            <ul id="main-menu" class="sm sm-blue">
+                <li><a href="https://uit.edu.vn" class="menu-item-text">Home</a></li>
+                <li><a href="https://uit.edu.vn" class="menu-item-text">About</a></li>
+                <li><a href="https://uit.edu.vn" class="menu-item-text">Download</a></li>
+                <li><a href="https://uit.edu.vn" class="menu-item-text">Support</a></li>
+                <li><a href="https://uit.edu.vn" class="menu-item-text">Docs</a></li>
+                <li id="more-option">
+                    <a href="" class="menu-item-text">Sub test</a>
+                    <ul class="sub-menu">
+                        <li class="event"><a href="#" class="text">Dummy item</a></li>
+                        <li class="event"><a href="#" class="text">Dummy item</a></li>
+                        <li class="event"><a href="#" class="text">Current item test</a></li>
+                        <li class="event"><a href="#" class="text">Dummy item</a></li>
+                        <li class="event"><a href="#" class="text">Dummy item</a></li>    
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="menu-item-text">Mega menu</a>
+                </li>
+            </ul>
+        </nav>
+  </div>
+</body>
+</html>

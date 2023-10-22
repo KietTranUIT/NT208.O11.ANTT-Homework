@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Bài 3</title>
+<style>
+    p {
+        font-size: 20px;
+    }
+
+    .scroll-button {
+        position: fixed;
+        z-index: 9999;
+        background-color: #52adf2;
+        right: 20px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .up {
+        bottom: 70px;
+    }
+
+    .down {
+        bottom: 20px;
+    }
+</style>
+</head>
+<body>
+  <h1>
+    Lời bài hát
+  </h1>
+  <h2>Chiều hôm ấy</h2>
+  <p>Chiều hôm ấy em nói với anh, rằng mình không nên gặp nhau nữa người ơi.</p>
+  <p>Em đâu biết anh đau thế nào...</p>
+  <p>Khoảng lặng phủ kín căn phòng ấy, tim anh như thắt lại</p>
+  <p>Và mong đó chỉ là mơ</p>
+  <p>Vì anh còn yêu em rất nhiều</p>
+  <br>
+  <p>Giọt buồn làm nhòe đi dòng kẻ mắt</p>
+  <p>Hòa vào cơn mưa là những nỗi buồn kia</p>
+  <p>Em khóc cho cuộc tình chúng mình...</p>
+  <p>Cớ sao còn yêu nhau, mà mình không thể đến được với nhau</p>
+  <p>Tại vì anh sai hay vì bên em có ai kia.</p>
+  <br>
+  <p>Chẳng ai có thể hiểu nổi được trái tim, khi đã lỡ yêu rồi</p>
+  <p>Chỉ biết trách bản thân đã mù quáng trót yêu một người vô tâm</p>
+  <p>Từng lời hứa như vết dao lạnh lùng</p>
+  <p>Cắt thật sâu trái tim này</p>
+  <p>Vì muốn thấy em hạnh phúc nên anh sẽ lùi về sau</p>
+  <br>
+  <p>Thời gian qua chúng ta liệu sống tốt hơn</p>
+  <p>Hay cứ mãi dối lừa</p>
+  <p>Nhìn người mình thương ướt nhòe mi cay khiến tim này càng thêm đau</p>
+  <p>Người từng khiến anh thay đổi là em...</p>
+  <p>Đã mãi xa rồi, thôi giấc mơ khép lại</p>
+  <p>Kí ức kia gửi theo,</p>
+  <p>Gió bay....</p>
+  <button class = "scroll-button up">&#x25B2</button>
+  <button class = "scroll-button down">&#x25BC</button>
+  <script>
+  $(document).ready(function() {
+    $(".up").click(function() {
+      $("html, body").animate({scrollTop: 0}, 500);
+    });
+    $(".down").click(function() {
+      $("html, body").animate({scrollTop: $(document).height()}, 500);
+    });
+  });
+  </script>
+</body>
+</html>
