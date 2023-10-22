@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#content-a-1").click(function() {
+                var str = $("#content-a-1").text();
+                if(str === "View more >") {
+                    $("#content-a-1").text("View less >");
+                    $("#content-more-1").show();
+                } else {
+                    $("a").text("View more >");
+                    $("#content-more-1").hide();
+                }
+            });
+            $("#content-a-2").click(function() {
+                var str = $("#content-a-2").text();
+                if(str === "View more >") {
+                    $("#content-a-2").text("View less >");
+                    $("#content-more-2").show();
+                } else {
+                    $("a").text("View more >");
+                    $("#content-more-2").hide();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-left">
+            <div class="content">
+                <img src="bai1.1.avif" alt="Error!">
+                <div class="container-item">
+                    <h2>Overview</h2>
+                    <p>We is learning automation company that provide solutions and engineering for
+                    customers in fields of industrial and commercial markets in applications of
+                    Process and Industrial Automation, Commercial & Residential Solutions. </p>
+                    <p>We are uniquely frontier to bring products and software to support and improve more efficientworld. 
+                        Our solutions enhance the qulity of life of people based on company's philosophy "Automation for People".
+                    </p>
+                    <p id="content-more-1">
+                        Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+                        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>                 
+                    <a href="#" id="content-a-1">View more ></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="bai1.2.jpg" alt="Error!">
+            <div class="container-item">
+                <h2>Overview</h2>
+                <p>We is learning automation company that provide solutions and engineering for
+                customers in fields of industrial and commercial markets in applications of
+                Process and Industrial Automation, Commercial & Residential Solutions. </p>
+                <p>We are uniquely frontier to bring products and software to support and improve more efficientworld. 
+                    Our solutions enhance the qulity of life of people based on company's philosophy "Automation for People".
+                </p>
+                <p id="content-more-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+                    Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>                 
+                <a href="#" id="content-a-2">View more ></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

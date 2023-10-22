@@ -1,0 +1,27 @@
+Sinh viên:
+- private: + MSSV
+           + Họ tên
+           + Điểm toán
+           + Điểm văn
+           + Điểm anh
+           + Điểm trung bình
+- public:
+           + Thêm sinh viên
+
+Lớp học:
+- private: + Mã Lớp
+           + Tên Lớp
+           + Số lượng sinh viên
+           + Một mảng chứa sinh viên của Lớp
+- public:  + Đọc dữ liệu sinh viên từ file .txt
+           + In ra thông tin lớp học
+
+Trường học:
+- private: + Tên Trường
+           + Địa chỉ
+           + Số lượng lớp học
+           + Một mảng chứa danh sách các lớp học
+           + Tổng số lượng sinh viên của Trường
+- public:  + In tất cả thông tin của một sinh viên
+           + Tính điểm trung bình cho sinh viên
+           + Hàm tạo một sinh viên mới

@@ -1,0 +1,55 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-left {
+    width: 48%;
+}
+
+.container-right {
+    width: 48%;
+}
+
+img {
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+}
+
+.container-item {
+    position: relative;
+    width: 70%;
+    background-color: white;
+    top: -70px;
+    right: -50%;
+    transform: translateX(-50%);
+    box-shadow: 2px gray;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+#content-more-1 {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
