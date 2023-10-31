@@ -167,11 +167,147 @@ footer p {
     padding: 10px;
 }
 
-@media only screen and (max-width: 426px) {    
-    html, body {
-        width: 100%;
+@media only screen and (min-width: 426px) and (max-width: 768px)
+{
+    header {
+        height: 70px;
+        background-color: white;
+        text-align: center;
+        color: #e1853d;
     }
 
+    header span {
+        color: black;
+    }
+
+    section {
+        grid-template-columns: 50% 50%;
+    }
+
+    .section-information{
+        grid-column: 1;
+        background-color: #f1f1f1;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .section-personal {
+        margin-top: 0px;
+        grid-column: 1;
+        grid-row: 2 / 5;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        border-left: none;
+        background-color: #f1f1f1;
+    }
+
+    .section-work {
+        padding-left: 20px;
+    }
+
+    .section-target {
+        padding-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .section-education {
+        margin-top: -100px;
+        padding-left: 20px;
+    }
+
+    .section-target {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .section-education{
+        grid-column: 2;
+        grid-row: 2/4;
+        
+    }
+
+    .section-work{
+        grid-column: 2;
+        grid-row:4/4;
+    }
+
+    .section-information-image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-information-content {
+        margin: 0;
+        width: 96%;
+    }
+
+
+   /* Force table to not be like tables anymore */
+   table,
+   thead,
+   tbody,
+   th,
+   td,
+   tr {
+       display: block;
+   }
+
+       /* Hide table headers (but not display: none;, for accessibility) */
+       thead tr {
+           position: absolute;
+           top: -9999px;
+           left: -9999px;
+       }
+
+   tr {
+       border: 1px solid #ccc;
+       margin-bottom: 10px;
+   }
+
+   #customers td {
+       /* Behave  like a "row" */
+       border: none;
+       border-bottom: 1px solid #eee;
+       position: relative;
+       padding-left: 30%;
+   }
+
+    #head {
+        display: none;
+    }
+
+   td:before {
+       display: inline-block;  
+       width: 35%;
+       padding-right: 10px;
+       white-space: nowrap;
+       font-weight: bold;
+   }
+
+   tr:nth-child(odd) {
+       background-color: #f2f2f2;
+   }
+
+   tr:nth-child(even) {
+       background-color: white;
+   }
+
+   td:nth-of-type(1):before {
+       content: "Vị trí";
+   }
+
+   td:nth-of-type(2):before {
+       content: "Đơn vị";
+   }
+
+   td:nth-of-type(3):before {
+       content: "Thời gian";
+   }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 426px) {    
     header {
         height: 70px;
         background-color: white;
@@ -189,7 +325,7 @@ footer p {
 
     .nav-items {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 49% 49%;
         grid-template-rows: 50% 50%;
         gap: 10px;
         text-decoration: none;
@@ -212,17 +348,24 @@ footer p {
         grid-template-columns: 100%;
     }
 
+    .section-information-content {
+        width: 100%;
+    }
+
     .section-personal {
         margin-top: 0px;
         grid-column: 1;
         grid-row: 2 / 5;
         padding-left: 20px;
+        padding-right: 20px;
         border-left: 1px solid #e1853d;
     }
     
     .section-information {
         background-color: #f1f1f1;
-        padding: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
         flex-direction: column;
     }
 
@@ -234,7 +377,6 @@ footer p {
     .section-information-content p {
         display: inline-block;
         margin: 0;
-        width: 25%;
     }
     
     .section-information-content span {
@@ -252,19 +394,23 @@ footer p {
     .section-information-content-detail {
       display: flex;
     }
+
+    .section-information-content-detail p, .section-information-content-detail span {
+        width: 50%;
+    }
     
     .section-personal {
         background-color: #f1f1f1;
         border-left: none;
     }
 
-    .section-introduce, .section-contact, .section-target, .section-education, .section-work {
+    .section-information, .section-introduce, .section-contact, .section-target, .section-education, .section-work {
         text-align: center;
         padding-left: 5px;
         padding-right: 5px;
     }
 
-    .section-introduce p, .section-contact ul, .section-contact p, .section-target p, .section-education-item {
+    .section-information-content-detail, .section-introduce p, .section-contact ul, .section-contact p, .section-target p, .section-education-item {
         text-align: left;
     }
 
@@ -343,3 +489,194 @@ footer p {
         content: "Thời gian";
     }
   }
+
+@media only screen and (max-width: 320px) {
+    header {
+        height: 80px;
+        background-color: white;
+        text-align: center;
+        color: #e1853d;
+    }
+
+    header span {
+        color: black;
+    }
+
+    nav {
+        margin-bottom: 40px;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+    
+    .nav-items li {
+        width: 98%;
+        height: 30px;
+        background-color: #e1853d;
+        text-align: center;
+    }
+
+    .nav-items a {
+        color: white;
+        text-decoration: none;
+    }
+
+    section {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .section-personal {
+        margin-top: 0px;
+        grid-column: 1;
+        grid-row: 2 / 5;
+        padding-left: 20px;
+        border-left: 1px solid #e1853d;
+    }
+    
+    .section-information {
+        background-color: #f1f1f1;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .section-information-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-information-content {
+        width: 100%;
+    }
+
+    .section-information-content p {
+        display: inline-block;
+        margin: 0;
+        width: 25%;
+    }
+    
+    .section-information-content span {
+        width: 50%;
+        margin: 0;
+    }
+    
+    .section-information-content h5 {
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+    
+    .section-information-content-detail {
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section-information-content-detail p, .section-information-content-detail span {
+        width: 50%;
+    }
+    
+    .section-personal {
+        background-color: #f1f1f1;
+        border-left: none;
+    }
+
+    .section-introduce, .section-contact, .section-target, .section-education, .section-work {
+        text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section-information-content-detail, .section-introduce p, .section-contact ul, .section-contact p, .section-target p, .section-education-item {
+        text-align: left;
+    }
+
+    .section-target {
+        margin-top: 20px;
+    }
+
+    #target, .section-work h5, .section-education h5 {
+        color: #e1853d;
+        text-decoration: underline;
+    }
+    
+    footer {
+      background-color: #f1f1f1;
+    }
+
+    #head {
+        display: none;
+    }
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+        /* Hide table headers (but not display: none;, for accessibility) */
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    #customers td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 30%;
+    }
+
+    td:before {
+        display: inline-block;  
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: white;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Vị trí";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Đơn vị";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Thời gian";
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 550px) {
+    .section-education {
+        margin-top: 0px;
+        padding-left: 20px;
+    }
+}
+
