@@ -1,0 +1,121 @@
+html {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.navbar-header ul {
+    list-style-type: none;
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    height: 70px;
+    align-items: center;
+}
+
+.navbar-header ul li {
+    height: 100%;
+    width: 10%;
+    padding: auto;
+}
+
+.navbar-header ul li:hover {
+    color: black;
+    background-color: white;
+}
+
+table {
+    margin: auto;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+table td, th {
+    border: 1px solid black;
+}
+
+.section-title th{
+    text-align: left;
+    padding: 10px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.name-products {
+    display: flex;
+    align-items: center;
+}
+
+.name-products span {
+    color: #ad3d3d;
+    font-weight: bolder;
+}
+
+.infor-products {
+    text-align: center;
+}
+
+tr td:nth-child(3), tr td:nth-child(4) {
+    font-weight: bolder;
+}
+
+.section-row {
+    width: 100%;
+}
+
+.section-title th:nth-child(1) {
+    width: 2%;
+}
+
+.section-title th:nth-child(2) {
+    width: 60%;
+}
+
+.section-title th:nth-child(3) {
+    width: 8%;
+}
+
+.section-title th:nth-child(n + 3) {
+    width: 10%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+.section-information {
+    margin-left: 50px;
+}
+
+.success, .fail {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.form-element input {
+    width: 400px;
+}
+
+.form-element {
+    display: flex;
+    justify-content: space-between;
+}
+

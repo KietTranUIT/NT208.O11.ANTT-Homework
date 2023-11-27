@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai 3</title>
+        <link rel="stylesheet" href="/assets/bai3.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.btn-edit').click(function() {
+                let id = this.dataset.productId
+
+                fetch('/update_products', {
+                    method: 'GET'
+                })
+                .then(response => {
+                    localStorage.setItem('id', id)
+                    window.location.href = response.url
+                    })
+                })
+            })
+
+function NewProduct() {
+   fetch('/create_products', {
+      method: 'GET'
+   })
+   .then(response => {
+      window.location.href = response.url
+   })
+}
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar-header">
+                <ul>
+                    <li>
+                        <div>
+                            <a>IT SHOP</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>Home</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>About</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>Product</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>Product2</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>Contact</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section>
+            <div class="section-title">
+                <h2>Danh sách sản phẩm</h2>
+                <button type="button" class="btn btn-primary" onclick="NewProduct()">Create New</button>
+            </div>
+            <div class="section-body">
+                <table>
+                    <tr class="section-title">
+                        <th>STT</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Tình trạng</th>
+                        <th>Thao tác</th>
+                    </tr>
+                    
+                    {{ range .}}
+                    <tr class="section-row" id="{{ .Title }}">
+                        <td class="infor-products">{{ .Id }}</td>
+                        <td class="name-products">
+                            <img src="{{ .Image }}" alt="Error!">
+                            <div>
+                                <span>
+                                    {{ .Title }}
+                                </span>
+                                <p>
+                                    {{ .Summary }}
+                                </p>
+                            </div>
+                        </td>
+                        <td class="infor-products">
+                            {{ .Price }} VND
+                        </td>
+                        <td class="infor-products">
+                            {{ if eq .Number 0}}
+                            <span style="color: red;">Het hang</span> <br>
+                            <span>(0)</span>
+                            {{else}}
+                            <span>Con hang</span> <br>
+                            <span>({{ .Number }})</span>
+                            {{ end }}
+                        </td>
+                        <td class="infor-products">
+                            <button type="button" data-product-id="{{ .Id }}" class="btn btn-primary btn-edit">Edit</button>
+                            <button type="button" class="btn btn-outline-secondary">Details</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </table>
+            </div>
+        </section>
+    </body>
+</html>

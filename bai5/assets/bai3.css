@@ -1,0 +1,128 @@
+.section-title {
+    margin-left: 20px;
+}
+
+html {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.navbar-header ul {
+    list-style-type: none;
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    height: 70px;
+    align-items: center;
+}
+
+.navbar-header ul li {
+    height: 100%;
+    width: 10%;
+    padding: auto;
+}
+
+.navbar-header ul li:hover {
+    color: black;
+    background-color: white;
+}
+
+table {
+    margin: auto;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+table td, th {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.section-title th{
+    text-align: left;
+    padding: 10px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
+
+.name-products {
+    display: flex;
+    align-items: center;
+}
+
+.name-products span {
+    color: #ad3d3d;
+    font-weight: bolder;
+}
+
+.infor-products {
+    text-align: center;
+}
+
+tr td:nth-child(3), tr td:nth-child(4) {
+    font-weight: bolder;
+}
+
+.section-row {
+    width: 100%;
+}
+
+.section-title th:nth-child(1) {
+    width: 2%;
+}
+
+.section-title th:nth-child(2) {
+    width: 50%;
+}
+
+.section-title th:nth-child(3) {
+    width: 8%;
+}
+
+.section-title th:nth-child(n + 3) {
+    width: 15%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.section-form {
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 50px;
+    width: 95%;
+    border-top: 1px solid gray;
+}
+
+form {
+    width: 70%;
+    float: right;
+}
+
+form label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+form input {
+    width: 80%;
+    float: right;
+    margin-bottom: 50px;
+    margin-right: 100px;
+}
